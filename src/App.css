@@ -3,6 +3,33 @@
 }
 
 /* Define the animation keyframes */
+.animate-wave {
+  transition: fill 0.2s ease;
+  animation: wave 1s linear infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-5deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+
+  75% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 @keyframes tongue-animation {
   0% {
     transform: translateY(0);

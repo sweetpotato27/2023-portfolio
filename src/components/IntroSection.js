@@ -4,14 +4,17 @@ import { DarkModeContext } from '../App';
 
 const IntroSection = () => {
   const isDarkMode = React.useContext(DarkModeContext);
+  const [isHovered, setIsHovered] = React.useState(false);
   return (
     <div className={`md:px-26 md:py-72 ${isDarkMode ? 'text-alabaster' : 'text-dark-charcoal'}`}>
       <div className="flex justify-center">
         <Title text="hello"/>
-        <div className="ml-8 w-6 h-6 transition-colors transition-250 filter-grayscale-100 flex flex-col items-center">
-          <p className="text-6xl animation-wave animation-5 animation-ease animation-infinite animation-paused">
-            👋
-          </p>
+        <div
+          className={`ml-4 flex flex-col justify-center items-center text-6xl ${isHovered ? 'animate-wave' : ''}`}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          ✌️
         </div>
       </div>
       <Title text="i am Dylan Matthews"/>
