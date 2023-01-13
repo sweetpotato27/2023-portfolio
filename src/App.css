@@ -2,37 +2,78 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Define the animation keyframes */
+@keyframes tongue-animation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+    visibility: hidden;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@keyframes expand-animation {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes hide-animation {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+    visibility: hidden;
+  }
+}
+
+@keyframes crt-off {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  20% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  80% {
+    transform: scale(0.6);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+#menu.hide {
+  animation: hide-animation 0.2s ease-out forwards;
+}
+#menu.show {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  animation: expand-animation 0.2s ease-out forwards;
+}
+.icon {
+  transition: fill 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.hide {
+  fill: transparent;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.show {
+  fill: currentColor;
+}
+
+.text-OpenSans {
+  font-family: 'Open Sans', sans-serif;
 }
