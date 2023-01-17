@@ -20,8 +20,8 @@ const App = () => {
       <div className={`App text-OpenSans w-[100vw] flex flex-col min-h-[100vh] ${isDarkMode ? 'bg-vampire-black' :'bg-alabaster'}`}>
         <NavBar setIsDarkMode={setIsDarkMode} />
         <Routes>
-          <Route path="/" exact element={<Home />} />
-          {/* <Route path="/home" element={<Home />} /> */}
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/resume" element={<Resume />} />
         </Routes>
         <Footer />
