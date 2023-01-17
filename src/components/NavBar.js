@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import { ButtonRoute, DarkModeToggle, SocialLink, SubTitle } from "./subcomponents";
 import { DarkModeContext } from '../App';
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 
 const NavBar = ({ setIsDarkMode }) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
@@ -82,7 +82,7 @@ const NavBar = ({ setIsDarkMode }) => {
                         my-4
                         ${isDarkMode ? 'text-alabaster' : 'text-dark-charcoal'}`}
       >
-        <a href="/home" className={`rounded 
+        <Link to="/home" className={`rounded 
                                 font-normal
                                 text-2xl
                                 tracking-tight
@@ -91,7 +91,7 @@ const NavBar = ({ setIsDarkMode }) => {
                                 ${isDarkMode ? 'hover:bg-vampire-black' : 'hover:bg-alabaster'}`}
         >
           <SubTitle text="Dylan Matthews"/>
-        </a>
+        </Link>
         <div id="icons" className={`md:flex 
                                     items-center
                                     h-full
