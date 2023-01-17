@@ -13,7 +13,7 @@ const App = () => {
 
   const location = useLocation();
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (location.pathname === '/2023-portfolio/') {
       history.push('/home');
     }
