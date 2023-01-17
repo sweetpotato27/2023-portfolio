@@ -1,10 +1,20 @@
 import React, {useEffect} from "react";
 import { ButtonRoute, DarkModeToggle, SocialLink, SubTitle } from "./subcomponents";
 import { DarkModeContext } from '../App';
+import { useLocation, useNavigate } from "react-router-dom";
 
 const NavBar = ({ setIsDarkMode }) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
   const isDarkMode = React.useContext(DarkModeContext);
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  React.useEffect(() => {
+    if (location.pathname === '/') {
+      navigate('/home');
+    }
+  }, [location, navigate]);
 
   useEffect(() => {
     const handleResize = () => {
