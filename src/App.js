@@ -1,18 +1,17 @@
 import * as React from 'react';
 import './App.css';
 import { NavBar, Resume, Home, Footer } from "./components";
-import { HashRouter as Router, Route, Routes, useLocation, useHistory } from "react-router-dom";
+import { HashRouter as Router, Route, Routes, useLocation, withRouter } from "react-router-dom";
 
 export const DarkModeContext = React.createContext(true);
 
-const App = () => {
+const App = ({history}) => {
   const [isDarkMode, setIsDarkMode] = React.useState(() => {
     const localStorageValue = localStorage.getItem('isDarkMode');
     return localStorageValue ? JSON.parse(localStorageValue) : true;
   });
 
   const location = useLocation();
-  const history = useHistory();
 
   React.useEffect(() => {
     if (location.pathname === '/2023-portfolio/') {
@@ -40,5 +39,5 @@ const App = () => {
   );
 };
 
-export default App;
+export default withRouter(App);
 
