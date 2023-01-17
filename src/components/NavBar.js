@@ -72,7 +72,7 @@ const NavBar = ({ setIsDarkMode }) => {
                         my-4
                         ${isDarkMode ? 'text-alabaster' : 'text-dark-charcoal'}`}
       >
-        <a href="/" className={`rounded 
+        <a href="/home" className={`rounded 
                                 font-normal
                                 text-2xl
                                 tracking-tight

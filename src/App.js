@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './App.css';
 import { NavBar, Resume, Home, Footer } from "./components";
-import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 
 export const DarkModeContext = React.createContext(true);
 
@@ -10,6 +10,14 @@ const App = () => {
     const localStorageValue = localStorage.getItem('isDarkMode');
     return localStorageValue ? JSON.parse(localStorageValue) : true;
   });
+
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === '/2023-portfolio/') {
+      history.push('/home');
+    }
+  }, [location]);
   
   React.useEffect(() => {
     localStorage.setItem('isDarkMode', JSON.stringify(isDarkMode));
@@ -21,7 +29,7 @@ const App = () => {
         <Router>
           <NavBar setIsDarkMode={setIsDarkMode} />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/resume" element={<Resume />} />
           </Routes>
           <Footer />
