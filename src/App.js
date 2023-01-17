@@ -18,7 +18,7 @@ const App = () => {
     if (location.pathname === '/2023-portfolio/') {
       history.push('/home');
     }
-  }, [location]);
+  }, [location, history]);
   
   React.useEffect(() => {
     localStorage.setItem('isDarkMode', JSON.stringify(isDarkMode));
