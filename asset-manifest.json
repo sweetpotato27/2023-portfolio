@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "https://sweetpotato27.github.io/2023-portfolio/static/css/main.5f289f4a.css",
-    "main.js": "https://sweetpotato27.github.io/2023-portfolio/static/js/main.f61610ff.js",
+    "main.js": "https://sweetpotato27.github.io/2023-portfolio/static/js/main.dd8895bd.js",
     "static/js/787.38cee4c7.chunk.js": "https://sweetpotato27.github.io/2023-portfolio/static/js/787.38cee4c7.chunk.js",
     "static/media/open-sans-latin-800.woff": "https://sweetpotato27.github.io/2023-portfolio/static/media/open-sans-latin-800.8ab0bbdd48f276f4ba56.woff",
     "static/media/open-sans-latin-700.woff": "https://sweetpotato27.github.io/2023-portfolio/static/media/open-sans-latin-700.f24f4bcef8a4a0eb6345.woff",
@@ -25,11 +25,11 @@
     "static/media/open-sans-latin-400italic.woff2": "https://sweetpotato27.github.io/2023-portfolio/static/media/open-sans-latin-400italic.bb915319f59c02c348a6.woff2",
     "index.html": "https://sweetpotato27.github.io/2023-portfolio/index.html",
     "main.5f289f4a.css.map": "https://sweetpotato27.github.io/2023-portfolio/static/css/main.5f289f4a.css.map",
-    "main.f61610ff.js.map": "https://sweetpotato27.github.io/2023-portfolio/static/js/main.f61610ff.js.map",
+    "main.dd8895bd.js.map": "https://sweetpotato27.github.io/2023-portfolio/static/js/main.dd8895bd.js.map",
     "787.38cee4c7.chunk.js.map": "https://sweetpotato27.github.io/2023-portfolio/static/js/787.38cee4c7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5f289f4a.css",
-    "static/js/main.f61610ff.js"
+    "static/js/main.dd8895bd.js"
   ]
 }
