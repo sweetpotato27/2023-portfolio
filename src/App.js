@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './App.css';
 import { NavBar, Resume, Home, Footer } from "./components";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
 export const DarkModeContext = React.createContext(true);
 
