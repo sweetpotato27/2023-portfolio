@@ -11,7 +11,7 @@ const SocialLink = ({link, type}) => {
       height="32"
       viewBox="-4 -4 32 32"
       fill="none"
-      stroke={`${isDarkMode ? '#f1e8e6' : '#322B33'}`}
+      stroke={`${isDarkMode ? '#79EAFF' : '#322B33'}`}
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -29,7 +29,7 @@ const SocialLink = ({link, type}) => {
       height="32"
       viewBox="-4 -4 32 32"
       fill="none"
-      stroke={`${isDarkMode ? '#f1e8e6' : '#322B33'}`}
+      stroke={`${isDarkMode ? '#79EAFF' : '#322B33'}`}
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
@@ -45,7 +45,7 @@ const SocialLink = ({link, type}) => {
       height="32"
       width="32"
       viewBox="0 0 48 48"
-      fill={`${isDarkMode ? '#f1e8e6' : '#322B33'}`}>
+      fill={`${isDarkMode ? '#79EAFF' : '#322B33'}`}>
       <path
         d="M7 40q-1.2 0-2.1-.9Q4 38.2 4 37V11q0-1.2.9-2.1Q5.8 8 7 8h34q1.2 0 2.1.9.9.9.9 2.1v26q0 1.2-.9 2.1-.9.9-2.1.9Zm17-15.1L7 13.75V37h34V13.75Zm0-3L40.8 11H7.25ZM7 13.75V11v26Z" />
     </svg>
@@ -57,7 +57,7 @@ const SocialLink = ({link, type}) => {
       href={link}
       target="_blank"
       rel="noreferrer"
-      className={`flex py-2 px-1 rounded ${isDarkMode ? 'hover:bg-vampire-black' : 'hover:bg-alabaster'}`}>
+      className={`svg-icon-container dark flex py-2 px-1 rounded ${isDarkMode ? 'hover:bg-vampire-black' : 'hover:bg-alabaster'}`}>
       {icon}
     </a>
   )

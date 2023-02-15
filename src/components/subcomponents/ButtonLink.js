@@ -1,11 +1,11 @@
 import React from 'react';
 import { DarkModeContext } from '../../App';
 
-const ButtonLink = ({ text, link, className = "" }) => {
+const ButtonLink = ({ title = "", text, link, className = "" }) => {
   const isDarkMode = React.useContext(DarkModeContext);
   return (
     <a
-      title="LinkedIn"
+      title={title}
       href={link}
       target="_blank"
       rel="noreferrer"

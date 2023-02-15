@@ -4,8 +4,11 @@ import { DarkModeContext } from '../App';
 const ProjectSection = () => {
   const isDarkMode = React.useContext(DarkModeContext);
   return (
-    <div className={`md:px-26 md:py-72 ${isDarkMode ? 'text-alabaster bg-vampire-black' : 'text-dark-charcoal bg-alabaster'}`}>
-      project coming soon...
+    <div className={`md:pt-[25vh] ${isDarkMode ? 'text-electric-blue' : 'text-dark-charcoal'}`}>
+      <div className="flex flex-col">
+        <span>Work In Progress</span>
+        <span>Stay Tuned</span>
+      </div>
     </div>
   )
 }

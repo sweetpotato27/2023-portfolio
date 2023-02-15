@@ -1,15 +1,19 @@
 import React from 'react';
-import { Title, ParaContent, REMContent, TextLink, ButtonLink } from './subcomponents';
+import { ParaContent, REMContent, TextLink, ButtonLink } from './subcomponents';
 import { DarkModeContext } from '../App';
 
 const Resume = () => {
   const isDarkMode = React.useContext(DarkModeContext);
   return (
-    <div className={`max-w-[960px] pt-24 mx-4 md:mx-8 lg:m-auto text-left ${isDarkMode ? 'text-alabaster' : 'text-dark-charcoal'}`}>
+    <div className={`max-w-[960px] h-[55vh] overflow-y-scroll mt-20 mx-4 md:mx-8 lg:mx-auto text-left ${isDarkMode ? 'text-alabaster' : 'text-dark-charcoal'}`}>
       <div className="flex justify-between items-center">
-        <Title text="resume" />
+        {/* <Title text="resume" /> */}
         
-        <ButtonLink text={
+        <REMContent text="(916).212.4415 - dbmsoftware27@gmail.com - github.com/sweetpotato27"/>
+        <hr className="mt-4"/>
+        <ButtonLink
+          title="Resume"
+          text={
           <div className="flex flex-row items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -24,11 +28,9 @@ const Resume = () => {
               download resume
             </span>
           </div>
-        } link="/DylanMatthewsResume.pdf" />
+        } link="/2023-portfolio/DylanMatthewsResume.pdf" />
       </div>
   
-      <REMContent text="(916).212.4415 - dbmsoftware27@gmail.com - github.com/sweetpotato27"/>
-      <hr className="mt-4"/>
   
       <ParaContent className="my-4 md:my-6" text="SUMMARY" />
       <REMContent text="Motivated and proactive software developer with experience in building web
@@ -111,7 +113,7 @@ const Resume = () => {
         <div className="flex items-center justify-between">
           <ParaContent className="text-[1rem] md:text-[1.2rem]" text="Quoridor | (Node.js, Express.js, Socket.io, Webpack, SCSS"/>
           <div className="flex flex-row">
-            <TextLink className="!text-[1rem] md:!text-[1.2rem]" text="live" link="https://quoridor-portfolio-project.herokuapp.com/" />
+            <TextLink className="!text-[1rem] md:!text-[1.2rem]" text="live" link="https://sweetpotato27.github.io/quoridor/" />
             <div className="border-l-2"></div>
             <TextLink className="!text-[1rem] md:!text-[1.2rem]" text="github" link="https://github.com/sweetpotato27/quoridor" />
           </div>

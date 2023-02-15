@@ -7,15 +7,6 @@ const NavBar = ({ setIsDarkMode }) => {
   const [isExpanded, setIsExpanded] = React.useState(false);
   const isDarkMode = React.useContext(DarkModeContext);
 
-  // const location = useLocation();
-  // const navigate = useNavigate();
-
-  // React.useEffect(() => {
-  //   if (location.pathname === '/') {
-  //     navigate('/home');
-  //   }
-  // }, [location, navigate]);
-
   useEffect(() => {
     const handleResize = () => {
       if(window.innerWidth >= 768) setIsExpanded(false);
@@ -61,43 +52,43 @@ const NavBar = ({ setIsDarkMode }) => {
   }
 
   return (
-    <div className={`h-[5rem]
-                      fixed
-                      w-full
-                      z-20
-                      flex
-                      justify-center
-                      items-center
-                      px-4
-                      m-auto
-                      md:py-4
-                      md:px-8
-                      ${isDarkMode ? 'bg-raisin-black' : 'bg-dust-storm'}`}
+    <div id="navigation-bar"
+      className={`h-[6rem]
+                  flex
+                  w-full
+                  max-w-[960px]
+                  m-auto
+                  justify-center
+                  md:py-4
+                  md:px-8
+                `}
     >
       <div className={`max-w-[960px] 
                         w-full 
                         flex
+                        px-20
                         justify-between
-                        items-center
-                        my-4
-                        ${isDarkMode ? 'text-alabaster' : 'text-dark-charcoal'}`}
+                        items-center`}
       >
-        <Link to="/home" className={`rounded 
-                                font-normal
-                                text-2xl
-                                tracking-tight
-                                md:my-2
-                                md:py-2
-                                ${isDarkMode ? 'hover:bg-vampire-black' : 'hover:bg-alabaster'}`}
+        {/* <Link to="/"
+          className={`rounded 
+                      font-normal
+                      text-2xl
+                      tracking-tight
+                      md:my-2
+                      md:py-2
+                    `}
         >
-          <SubTitle text="Dylan Matthews"/>
-        </Link>
-        <div id="icons" className={`md:flex 
-                                    items-center
-                                    h-full
-                                    hidden`}
+        </Link> */}
+        <SubTitle className={"rounded font-normal text-2xl tracking-tight md:my-2 md:py-2"} text="Dylan Matthews"/>
+        <div id="icons"
+          className={`md:flex 
+                      items-center
+                      h-full
+                      hidden
+                    `}
         >
-          <ButtonRoute text="resume" link="resume" />
+          {/* <ButtonRoute text="resume" link="resume" /> */}
           <SocialLink link="https://github.com/sweetpotato27" type="github"/>
           <SocialLink link="https://www.linkedin.com/in/dylan-brinkman-matthews/" type="linkedin"/>
           <SocialLink link="mailto:dbmsoftware27@gmail.com" type="mail"/>

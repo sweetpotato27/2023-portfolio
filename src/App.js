@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './App.css';
-import { NavBar, Resume, Home, Footer } from "./components";
+import { Resume, Home } from "./components";
 import { Route, Routes } from "react-router-dom";
 
 export const DarkModeContext = React.createContext(true);
@@ -17,14 +17,12 @@ const App = () => {
 
   return (
     <DarkModeContext.Provider value={isDarkMode}>
-      <div className={`App text-OpenSans w-[100vw] flex flex-col min-h-[100vh] ${isDarkMode ? 'bg-vampire-black' :'bg-alabaster'}`}>
-        <NavBar setIsDarkMode={setIsDarkMode} />
+      <div className={`App text-OpenSans w-[100vw] flex flex-col min-h-[100vh] rounded-[7rem] ${isDarkMode ? 'bg-prussian-blue text-electric-blue' :'bg-alabaster'}`}>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/resume" element={<Resume />} />
+          <Route path="/" element={<Home setIsDarkMode={setIsDarkMode}/>} />
+          <Route path="/home" element={<Home setIsDarkMode={setIsDarkMode} />} />
+          <Route path="/resume" element={<Resume setIsDarkMode={setIsDarkMode}/>} />
         </Routes>
-        <Footer />
       </div>
     </DarkModeContext.Provider>
   );

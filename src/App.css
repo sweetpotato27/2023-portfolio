@@ -2,10 +2,308 @@
   text-align: center;
 }
 
+/* Terminal Window */
+.terminal-window {
+  background-color: #000000;
+  color: #FFFFFF;
+  font-family: monospace;
+  /* width: 500px; */
+  height: 300px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 10px #888888;
+}
+
+/* Terminal Header */
+.terminal-header {
+  background-color: #2E2E2E;
+  height: 30px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+/* Terminal Title */
+.terminal-title {
+  font-size: 14px;
+  font-weight: bold;
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* Terminal Controls */
+.terminal-controls {
+  display: flex;
+}
+
+/* Terminal Control */
+.terminal-control {
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+}
+
+/* Close Control */
+.terminal-control.close {
+  background-color: #FF3B30;
+}
+
+/* Minimize Control */
+.terminal-control.minimize {
+  background-color: #4CD964;
+}
+
+/* Maximize Control */
+.terminal-control.maximize {
+  background-color: #0887FF;
+}
+
+/* Terminal Body */
+.terminal-body {
+  text-align: left;
+  padding: 10px;
+  overflow: auto;
+}
+
+/* Terminal Prompt */
+.terminal-prompt {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Terminal Input */
+.terminal-input {
+  white-space: pre-wrap;
+}
+
+.svg-icon-container.dark svg {
+  filter: drop-shadow(0px 5px 2px #000);
+}
+
+.character-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1em, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(1em, 1fr));
+  grid-gap: 10px;
+}
+
+
+.rainbow-border-shadow {
+  box-shadow: 0px 0px 15px #000;
+
+}
+
+.disappear {
+  opacity: 0;
+}
+
+.bubble {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border-radius: 50%;
+  background-color: red;
+  position: relative;
+}
+
+.bubble.pop {
+  animation: pop 0.5s ease-in-out;
+}
+
+.glitch > p {
+  opacity: 0.25;
+  animation: glitch-animation .4s infinite;
+}
+
+.move-element-down {
+  animation: moveDown 2.5s linear;
+}
+
+
+.button div span{
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  /* background-color: #3872A8; */
+  display: block;
+  position: relative;
+  top: -5px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+
+  /* -webkit-box-shadow: inset 0 1px 0 #0887FF, 0 5px 0 #274F75;
+  -moz-box-shadow: inset 0 1px 0 #0887FF, 0 5px 0 #274F75; */
+  /* box-shadow: inset 0 1px 0 #0887FF, 0 5px 0 #274F75; */
+
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.button div span.off {
+  top: -5px;
+}
+
+.button div span.off.day {
+  background-color: #3872A8;
+  -webkit-box-shadow: inset 0 1px 0 #0887FF, 0 5px 0 #274F75;
+  -moz-box-shadow: inset 0 1px 0 #0887FF, 0 5px 0 #274F75;
+  box-shadow: inset 0 1px 0 #0887FF, 0 5px 0 #274F75;
+}
+.button div span.off.night {
+  background-color: #3872A8;
+  -webkit-box-shadow: inset 0 1px 0 #0887FF, 0 5px 0 #274F75;
+  -moz-box-shadow: inset 0 1px 0 #0887FF, 0 5px 0 #274F75;
+  box-shadow: inset 0 1px 0 #0887FF, 0 5px 0 #274F75;
+}
+
+.button div span.on {
+  top: 0;
+  background-color: #0559A8;
+  -webkit-box-shadow: inset 0 1px 0 #0887FF, inset 0 -3px 0 #274F75;
+  -moz-box-shadow: inset 0 1px 0 #0887FF, inset 0 -3pxpx 0 #274F75;
+  box-shadow: inset 0 1px 0 #0887FF, inset 0 -3px 0 #274F75;
+}
+.button div span.on.day {
+  background-color: #0559A8;
+  -webkit-box-shadow: inset 0 1px 0 #0887FF, inset 0 -3px 0 #274F75;
+  -moz-box-shadow: inset 0 1px 0 #0887FF, inset 0 -3pxpx 0 #274F75;
+  box-shadow: inset 0 1px 0 #0887FF, inset 0 -3px 0 #274F75;
+}
+.button div span.on.night {
+  background-color: #0559A8;
+  -webkit-box-shadow: inset 0 1px 0 #0887FF, inset 0 -3px 0 #274F75;
+  -moz-box-shadow: inset 0 1px 0 #0887FF, inset 0 -3pxpx 0 #274F75;
+  box-shadow: inset 0 1px 0 #0887FF, inset 0 -3px 0 #274F75;
+}
+
+.button div {
+  padding: 4px;
+  z-index: 0;
+  background-color: #011933;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.night-box-shadow {
+  box-shadow: inset 0 1px 0 #0887FF, 0 5px 0 #274F75;
+}
+
+.day-box-shadow {
+  box-shadow: inset 0 1px 0 #0887FF, 0 5px 0 #274F75;
+}
+
+.button-to-cut {
+  transform: skew(45deg);
+  animation: cut 1s ease-in-out forwards;
+}
+
+@keyframes cut {
+  0% {
+    transform: skew(45deg);
+  }
+
+  50% {
+    transform: skew(45deg) translateX(-50%);
+  }
+
+  100% {
+    transform: skew(45deg) translateX(-50%) translateY(-50%);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes glitch-animation {
+  0% {
+    transform: translate(0, 0);
+    transform: skew(30deg, 20deg);
+    clip: rect(0, 900px, 0, 0);
+    opacity: 0.25;
+  }
+
+  25% {
+    clip: rect(0, 900px, 100px, 0);
+    transform: skew(30deg, 20deg);
+    opacity: 0.10;
+  }
+
+  50% {
+    clip: rect(0, 900px, 100px, 0);
+    transform: skew(30deg, 20deg);
+    transform: translate(-8px, 0);
+    opacity: 0.10;
+  }
+
+  100% {
+    clip: rect(0, 900px, 0, 0);
+    transform: translate(0, 0);
+    transform: skew(30deg, 20deg);
+    opacity: 0;
+  }
+}
+
+.shift-super-slow {
+  animation: shift 2s linear infinite;
+}
+.shift-slow {
+  animation: shift 1.5s linear infinite;
+}
+.shift {
+  animation: shift 1s linear infinite;
+}
+.shift-fast {
+  animation: shift 0.5s linear infinite;
+}
+
 /* Define the animation keyframes */
 .animate-wave {
   transition: fill 0.2s ease;
   animation: wave 1s linear infinite;
+}
+
+@keyframes shift {
+  0% {
+    transform: translate(0, 0px);
+  }
+
+  25% {
+    transform: translate(0, -5px);
+  }
+
+  50% {
+    transform: translate(0, 0px);
+  }
+
+  75% {
+    transform: translate(0, 5px);
+  }
+
+  100% {
+    transform: translate(0px);
+  }
+}
+
+@keyframes moveDown {
+  from {transform: translateY(0);}
+  to {transform: translateY(100vh);}
 }
 
 @keyframes wave {
